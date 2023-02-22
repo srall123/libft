@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: srall <srall@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 18:10:14 by lliu              #+#    #+#             */
-/*   Updated: 2023/02/21 23:38:19 by srall            ###   ########.fr       */
+/*   Updated: 2023/02/22 14:18:12 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "../include/libft.h"
+# include "libft.h"
 
 int		ft_printchr(int c);
 int		ft_printstr(char *str);

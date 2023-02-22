@@ -6,11 +6,11 @@
 /*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 18:01:02 by lliu              #+#    #+#             */
-/*   Updated: 2022/12/01 18:08:45 by lliu             ###   ########.fr       */
+/*   Updated: 2023/02/22 14:17:46 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 static int	ft_hex(unsigned long int ptr, char x)
 {

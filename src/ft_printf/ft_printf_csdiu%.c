@@ -6,11 +6,11 @@
 /*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 17:54:32 by lliu              #+#    #+#             */
-/*   Updated: 2022/12/01 18:27:18 by lliu             ###   ########.fr       */
+/*   Updated: 2023/02/22 14:17:41 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_printchr(int c)
 {

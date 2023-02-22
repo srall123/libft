@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: srall <srall@student.42.fr>                +#+  +:+       +#+         #
+#    By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 12:23:45 by lliu              #+#    #+#              #
-#    Updated: 2023/02/21 23:30:42 by srall            ###   ########.fr        #
+#    Updated: 2023/02/22 16:01:00 by lliu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,35 +66,35 @@ GNL_SRC =		get_next_line_bonus.c			\
 
 # ft_printf
 FTPRINTF_SRC =	ft_printf_csdiu%.c				\
-				ft_printf_libft.c				\
 				ft_printf_pxX.c					\
 				ft_printf.c
 
 ## 将不同来源的SRC更改后缀添加前缀后加入SRC的目标中
-SRC +=	$(addprefix libft/ft_is/, $(LIBFTIS_SRC))
-SRC +=	$(addprefix libft/ft_lst/, $(LIBFTLST_SRC))
-SRC +=	$(addprefix libft/ft_mem/, $(LIBFTMEM_SRC))
-SRC +=	$(addprefix libft/ft_put/, $(LIBFTPUT_SRC))
-SRC +=	$(addprefix libft/ft_str/, $(LIBFTSTR_SRC))
-SRC +=	$(addprefix libft/ft_to/, $(LIBFTTO_SRC))
-SRC +=	$(addprefix get_next_line/, $(GNL_SRC))
-SRC +=	$(addprefix ft_printf/, $(FTPRINTF_SRC))
+SRC +=	$(addprefix src/libft/ft_is/, $(LIBFTIS_SRC))
+SRC +=	$(addprefix src/libft/ft_lst/, $(LIBFTLST_SRC))
+SRC +=	$(addprefix src/libft/ft_mem/, $(LIBFTMEM_SRC))
+SRC +=	$(addprefix src/libft/ft_put/, $(LIBFTPUT_SRC))
+SRC +=	$(addprefix src/libft/ft_str/, $(LIBFTSTR_SRC))
+SRC +=	$(addprefix src/libft/ft_to/, $(LIBFTTO_SRC))
+SRC +=	$(addprefix src/get_next_line/, $(GNL_SRC))
+SRC +=	$(addprefix src/ft_printf/, $(FTPRINTF_SRC))
 ## 指定位置上生成obj文件
 OBJ_DIR		=	obj
 OBJ += $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
 ## 显式逐个生成目标文件
 CC			=	cc
-CFLAGS		=	-Wall -Wextra -Werror -I./include -c
+CFLAGS		=	-Wall -Wextra -Werror -I./inc -c
 $(OBJ_DIR)/%.o: %.c
 	@mkdir -p $(OBJ_DIR)
-	@mkdir -p $(OBJ_DIR)/libft/ft_is
-	@mkdir -p $(OBJ_DIR)/libft/ft_lst
-	@mkdir -p $(OBJ_DIR)/libft/ft_mem
-	@mkdir -p $(OBJ_DIR)/libft/ft_put
-	@mkdir -p $(OBJ_DIR)/libft/ft_str
-	@mkdir -p $(OBJ_DIR)/libft/ft_to
-	@mkdir -p $(OBJ_DIR)/get_next_line
-	@mkdir -p $(OBJ_DIR)/ft_printf
+	@mkdir -p $(OBJ_DIR)/src
+	@mkdir -p $(OBJ_DIR)/src/libft/ft_is
+	@mkdir -p $(OBJ_DIR)/src/libft/ft_lst
+	@mkdir -p $(OBJ_DIR)/src/libft/ft_mem
+	@mkdir -p $(OBJ_DIR)/src/libft/ft_put
+	@mkdir -p $(OBJ_DIR)/src/libft/ft_str
+	@mkdir -p $(OBJ_DIR)/src/libft/ft_to
+	@mkdir -p $(OBJ_DIR)/src/get_next_line
+	@mkdir -p $(OBJ_DIR)/src/ft_printf
 	@$(CC) $(CFLAGS) $< -o $@
 
 NAME 		=	libft.a
@@ -132,7 +132,7 @@ fclean: clean
 	@$(ECHO) "$(CYAN)[libft.a]:\t\ttarget files$(DEF_COLOR)$(GREEN) => Cleaned!$(DEF_COLOR)"
 
 norm:
-	@norminette $(SRC) ./include | grep -v Norme -B1 || true
+	@norminette $(SRC) ./inc | grep -v Norme -B1 || true
 
 re:	fclean all bonus
 

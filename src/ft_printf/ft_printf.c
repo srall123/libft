@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: srall <srall@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 18:00:50 by lliu              #+#    #+#             */
-/*   Updated: 2023/02/21 23:33:11 by srall            ###   ########.fr       */
+/*   Updated: 2023/02/22 14:17:50 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 // utils
 static int	ft_len_uitoa(unsigned int n)
 {
