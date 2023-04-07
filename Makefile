@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+         #
+#    By: srall <srall@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 12:23:45 by lliu              #+#    #+#              #
-#    Updated: 2023/02/22 16:01:00 by lliu             ###   ########.fr        #
+#    Updated: 2023/04/08 01:15:39 by srall            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,10 +78,10 @@ SRC +=	$(addprefix src/libft/ft_str/, $(LIBFTSTR_SRC))
 SRC +=	$(addprefix src/libft/ft_to/, $(LIBFTTO_SRC))
 SRC +=	$(addprefix src/get_next_line/, $(GNL_SRC))
 SRC +=	$(addprefix src/ft_printf/, $(FTPRINTF_SRC))
-## 指定位置上生成obj文件
+## generate OBJ files in given directory
 OBJ_DIR		=	obj
 OBJ += $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
-## 显式逐个生成目标文件
+## Explicitly generating object files one by one.
 CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror -I./inc -c
 $(OBJ_DIR)/%.o: %.c
