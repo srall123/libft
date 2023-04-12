@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstfree.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 15:49:20 by lliu              #+#    #+#             */
-/*   Updated: 2023/04/12 16:46:26 by lliu             ###   ########.fr       */
+/*   Created: 2023/04/12 16:49:53 by lliu              #+#    #+#             */
+/*   Updated: 2023/04/12 16:51:08 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
-{
-	t_list	*head;
+/* Free all the linked list */
 
-	head = NULL;
-	head = (t_list *)malloc(sizeof(t_list));
-	if (!head)
-		return (NULL);
-	head->content = content;
-	head->next = NULL;
-	return (head);
+void	lst_free(t_list *lst)
+{
+	t_list	*del;
+	t_list	*next;
+
+	del = lst;
+	while (del)
+	{
+		next = del->next;
+		free(del);
+		del = next;
+	}
 }
