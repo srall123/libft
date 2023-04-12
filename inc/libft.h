@@ -6,7 +6,7 @@
 /*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 13:05:35 by lliu              #+#    #+#             */
-/*   Updated: 2022/11/04 14:07:19 by lliu             ###   ########.fr       */
+/*   Updated: 2023/04/12 17:39:51 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+void				ft_lstfree(t_list *lst);
 
 #endif
