@@ -6,7 +6,7 @@
 #    By: srall <srall@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 12:23:45 by lliu              #+#    #+#              #
-#    Updated: 2023/04/08 01:15:39 by srall            ###   ########.fr        #
+#    Updated: 2023/04/16 22:48:01 by srall            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ LIBFTLST_SRC =	ft_lstadd_back.c		\
 				ft_lstlast.c			\
 				ft_lstmap.c			\
 				ft_lstnew.c			\
-				ft_lstsize.c
+				ft_lstsize.c		\
+				ft_lstfree.c
 
 LIBFTMEM_SRC =	ft_bzero.c			\
 				ft_calloc.c			\
