@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: srall <srall@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 12:26:02 by lliu              #+#    #+#             */
-/*   Updated: 2023/04/17 03:32:33 by srall            ###   ########.fr       */
+/*   Updated: 2023/04/18 15:50:30 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 	}
 	temp[i] = '\0';
-	free(s);
-	s = NULL;
 	return (temp);
 }
