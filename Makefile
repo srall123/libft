@@ -6,7 +6,7 @@
 #    By: srall <srall@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 12:23:45 by lliu              #+#    #+#              #
-#    Updated: 2023/04/16 22:48:01 by srall            ###   ########.fr        #
+#    Updated: 2023/04/19 00:20:18 by srall            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,8 @@ LIBFTMEM_SRC =	ft_bzero.c			\
 				ft_memcmp.c			\
 				ft_memcpy.c			\
 				ft_memmove.c		\
-				ft_memset.c
+				ft_memset.c			\
+				ft_realloc.c
 
 LIBFTPUT_SRC =	ft_putchar_fd.c		\
 				ft_putendl_fd.c		\
