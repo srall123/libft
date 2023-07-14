@@ -6,7 +6,7 @@
 /*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 21:03:59 by srall             #+#    #+#             */
-/*   Updated: 2023/07/14 21:57:18 by lliu             ###   ########.fr       */
+/*   Updated: 2023/07/14 21:59:01 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # endif
 
 char	*ft_strchr(const char *s, int c);
-void	*ft_calloc(size_t count, size_t size);
+void	*ft_calloc_gnl(size_t count, size_t size);
 char	*ft_joint(char *s1, char *s2);
 char	*ft_line(char *str);
 char	*ft_staticstr(char *str);

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 21:05:42 by srall             #+#    #+#             */
-/*   Updated: 2023/07/14 21:53:45 by lliu             ###   ########.fr       */
+/*   Updated: 2023/07/14 21:59:21 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc_gnl(size_t count, size_t size)
 {
 	size_t	i;
 	char	*addr;
 
 	if (!count || !size)
-		return (ft_calloc(1, 1));
+		return (ft_calloc_gnl(1, 1));
 	if (count * size / size != count)
 		return (NULL);
 	addr = malloc((count + 1) * size);
@@ -61,7 +61,7 @@ char	*ft_joint(char *s1, char *s2)
 		i++;
 	while (s2[j])
 		j++;
-	temp = (char *)ft_calloc((i + j + 1), sizeof(char));
+	temp = (char *)ft_calloc_gnl((i + j + 1), sizeof(char));
 	if (!temp)
 		return (NULL);
 	i = 0;
@@ -91,7 +91,7 @@ char	*ft_line(char *temp)
 	}
 	while (temp[i] != '\n' && temp[i])
 		i++;
-	dst = (char *)ft_calloc((i + 2), sizeof(char));
+	dst = (char *)ft_calloc_gnl((i + 2), sizeof(char));
 	if (!dst)
 		return (NULL);
 	i = 0;

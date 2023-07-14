@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 21:04:09 by srall             #+#    #+#             */
-/*   Updated: 2023/07/14 21:53:39 by lliu             ###   ########.fr       */
+/*   Updated: 2023/07/14 21:59:46 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static char	*ft_gettempstr(int num_read, int fd, char *buff, char *staticstr)
 
 	if (!staticstr)
 	{
-		temp = (char *)ft_calloc(1, 1);
+		temp = (char *)ft_calloc_gnl(1, 1);
 		if (!temp)
 			return (NULL);
 	}
@@ -48,7 +48,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
 		return (NULL);
-	buff = (char *)ft_calloc((BUFFER_SIZE + 1), sizeof(char));
+	buff = (char *)ft_calloc_gnl((BUFFER_SIZE + 1), sizeof(char));
 	if (!buff)
 		return (NULL);
 	num_read = BUFFER_SIZE;
