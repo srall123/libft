@@ -6,7 +6,7 @@
 /*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 21:05:42 by srall             #+#    #+#             */
-/*   Updated: 2023/07/14 21:59:21 by lliu             ###   ########.fr       */
+/*   Updated: 2023/07/14 22:01:28 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,7 @@ char	*ft_staticstr(char *temp)
 	j = 0;
 	while (temp[j])
 		j++;
-	staticstr = ft_calloc((j - i + 1), sizeof(char));
+	staticstr = ft_calloc_gnl((j - i + 1), sizeof(char));
 	if (!staticstr)
 		return (NULL);
 	if (temp[i] == '\n')
