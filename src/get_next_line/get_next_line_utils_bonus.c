@@ -6,11 +6,11 @@
 /*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 21:05:42 by srall             #+#    #+#             */
-/*   Updated: 2023/07/14 18:41:22 by lliu             ###   ########.fr       */
+/*   Updated: 2023/07/14 18:43:46 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 #include "libft.h"
 
 int	nl_include(const char *s)

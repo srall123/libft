@@ -6,11 +6,11 @@
 /*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 21:04:09 by srall             #+#    #+#             */
-/*   Updated: 2023/07/14 18:27:11 by lliu             ###   ########.fr       */
+/*   Updated: 2023/07/14 18:43:42 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 char	*get_next_line(int fd)
 {
