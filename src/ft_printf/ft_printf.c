@@ -6,7 +6,7 @@
 /*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 18:00:50 by lliu              #+#    #+#             */
-/*   Updated: 2023/02/22 14:17:50 by lliu             ###   ########.fr       */
+/*   Updated: 2023/07/14 18:41:54 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static int	ft_format(va_list args_ptr, char cur_ch)
 
 	len_print = 0;
 	if (cur_ch == 'c')
-		len_print += ft_printchr(va_arg(args_ptr, int));// 每次调用va_arg函数都会获取下一个参数的地址，并且按照函数定义的顺序依次获取参数。
+		len_print += ft_printchr(va_arg(args_ptr, int));
 	if (cur_ch == 's')
 		len_print += ft_printstr(va_arg(args_ptr, char *));
 	if (cur_ch == 'p')

@@ -6,71 +6,75 @@
 /*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 21:05:42 by srall             #+#    #+#             */
-/*   Updated: 2023/02/22 14:17:28 by lliu             ###   ########.fr       */
+/*   Updated: 2023/07/14 18:41:22 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
+#include "libft.h"
 
-int		nl_include(const char *s)
+int	nl_include(const char *s)
 {
 	if (!s)
-		return 0;
-	while(*s)
+		return (0);
+	while (*s)
 	{
 		if (*s++ == '\n')
-			return 1;
+			return (1);
 	}
-	return 0;
+	return (0);
 }
 
 char	*ft_joint(char *temp, char *buf)
 {
-	char	*res = NULL;
-	int		i = 0, j = 0, len = 0;
+	char	*res;
+	int		i;
+	int		j;
+	int		len;
 
+	i = 0;
+	j = 0;
+	len = 0;
 	while (temp[i])
 		i++;
 	while (buf[j])
 		j++;
-	res = (char *)malloc(sizeof(char) * (i + j + 1));
+	res = (char *)ft_calloc(sizeof(char), (i + j + 1));
 	if (!res)
 		return (NULL);
-	while (len < i + j + 1)
-		res[len++] = 0;
-	i = 0, j = 0, len = 0;
+	i = 0;
+	j = 0;
 	while (temp[i])
 		res[len++] = temp[i++];
-	free(temp);
 	while (buf[j])
 		res[len++] = buf[j++];
 	res[len] = '\0';
+	free(temp);
 	return (res);
 }
 
-char	*gettempstr(int fd, char *buff, char *staticstr)
+char	*gettempstr(int fd, int num_read, char *buff, char *staticstr)
 {
-	char	*temp = NULL;
-	int		num_read = BUFFER_SIZE;
+	char	*temp;
 
 	if (!staticstr)
 	{
-		if (!(temp = (char *)malloc(sizeof(char) * 1)))
+		temp = (char *)malloc(sizeof(char) * 1);
+		if (!temp)
 			return (NULL);
 		temp[0] = '\0';
 	}
 	while (num_read == BUFFER_SIZE && !nl_include(buff))
 	{
-		if ((num_read = read(fd, buff, BUFFER_SIZE)) < 0)
+		num_read = read(fd, buff, BUFFER_SIZE);
+		if (num_read < 0)
 			return (NULL);
 		buff[num_read] = '\0';
 		if (!staticstr)
 			temp = ft_joint(temp, buff);
 		else
-		{
 			temp = ft_joint(staticstr, buff);
-			staticstr = NULL;
-		}
+		staticstr = NULL;
 		if (!temp)
 			return (NULL);
 	}
@@ -79,9 +83,11 @@ char	*gettempstr(int fd, char *buff, char *staticstr)
 
 char	*ft_line(char *temp)
 {
-	char	*line = NULL;
-	int		i = 0;
+	char	*line;
+	int		i;
 
+	line = NULL;
+	i = 0;
 	if (!temp[i])
 		return (NULL);
 	while (temp[i])
@@ -106,11 +112,15 @@ char	*ft_line(char *temp)
 
 char	*ft_staticstr(char *temp)
 {
-	char	*staticstr = NULL;
-	int		i = 0, j = 0;
+	char	*staticstr;
+	int		i;
+	int		j;
 
+	staticstr = NULL;
+	i = 0;
+	j = 0;
 	if (!temp[i])
-		return NULL;
+		return (NULL);
 	while (temp[i])
 		i++;
 	while (temp[j] && temp[j] != '\n')
