@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: srall <srall@student.42.fr>                +#+  +:+       +#+         #
+#    By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 12:23:45 by lliu              #+#    #+#              #
-#    Updated: 2023/04/19 00:20:18 by srall            ###   ########.fr        #
+#    Updated: 2023/07/14 21:54:17 by lliu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,8 +63,8 @@ LIBFTTO_SRC =	ft_atoi.c			\
 				ft_toupper.c
 
 # get_net_line
-GNL_SRC =		get_next_line_bonus.c			\
-				get_next_line_utils_bonus.c
+GNL_SRC =		get_next_line.c			\
+				get_next_line_utils.c
 
 # ft_printf
 FTPRINTF_SRC =	ft_printf_csdiu%.c				\
