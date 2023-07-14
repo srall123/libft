@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lliu <lliu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 21:03:59 by srall             #+#    #+#             */
-/*   Updated: 2023/07/14 18:43:31 by lliu             ###   ########.fr       */
+/*   Updated: 2023/07/14 21:57:18 by lliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,12 @@
 #  define BUFFER_SIZE 1
 # endif
 
-// get_next_line_utils.c
-int		nl_include(const char *s);
-char	*ft_joint(char *temp, char *buf);
-char	*ft_line(char *temp);
-char	*ft_staticstr(char *temp);
-char	*gettempstr(int fd, int num_read, char *buff, char *staticstr);
-// get_next_line.c
+char	*ft_strchr(const char *s, int c);
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_joint(char *s1, char *s2);
+char	*ft_line(char *str);
+char	*ft_staticstr(char *str);
+
 char	*get_next_line(int fd);
 
 #endif
